@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <script>
+    if('CSS' in window && CSS.supports('color', 'var(--color-var)')) {
+      document.write('<link rel="stylesheet" href="assets/css/style.css">');
+    } else {
+      document.write('<link rel="stylesheet" href="assets/css/style-fallback.css">');
+    }
+  </script>
+  <noscript>
+    <link rel="stylesheet" href="assets/css/style-fallback.css">
+  </noscript>
+  <title>La Línea de Tiempo del Coronavirus | Nico Calvo</title>
+  <meta name="description" content="El virus originado en un mercado de China se ha propagado en más de 155 países, matando a más de 8000 personas y afectando a decenas de miles en pocas semanas.">
+  <meta property="og:url"                content="http://nicocalvo.com/coronavirus" />
+  <meta property="og:type"               content="article" />
+  <meta property="og:title"              content="La Línea de Tiempo del Coronavirus" />
+  <meta property="og:description"        content="La evolución del COVID-19 a lo largo de los meses" />
+  <meta property="og:image"              content="http://nicocalvo.com/coronavirus/assets/img/print.png" />
+</head>
+<body>
+  <header class="f-header js-f-header">
+    <div class="f-header__mobile-content container max-width-lg">
+      <a href="https://nicocalvo.com" class="f-header__logo">
+        <img width="90" src="https://nicocalvo.com/wp/wp-content/uploads/2020/01/logo-2019.png">
+      </a>
+  
+      <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus" aria-label="Toggle menu">
+        <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+      </button>
+    </div>
+  
+    <div class="f-header__nav" role="navigation">
+      <div class="f-header__nav-grid justify-between@md container max-width-lg">
+        <div class="f-header__nav-logo-wrapper flex-grow flex-basis-0">
+          <a href="https://nicocalvo.com" class="f-header__logo">
+            <img width="90" src="https://nicocalvo.com/wp/wp-content/uploads/2020/01/logo-2019.png">
+          </a>
+        </div>
+    
+        <ul class="f-header__list flex-grow flex-basis-0 justify-center@md">
+          <li class="f-header__item"><a href="precauciones" class="f-header__link">Precauciones</a></li>
+          <li class="f-header__item"><a href="https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019" target="_blank" class="f-header__link">Coronavirus y la OMS</a></li>
+        </ul>
+    
+        <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
+          <li class="f-header__item">
+            <a href="https://linkedin.com/in/nicolascalvo" target="_blank" class="f-header__link f-header__link--icon" aria-label="LinkedIn">
+              <svg class="icon" viewBox="0 0 28 28"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+              <span class="margin-left-xs">LinkedIn</span>
+            </a>
+          </li>
+
+          <li class="f-header__item">
+            <a href="https://instagram.com/calvonico" target="_blank" class="f-header__link f-header__link--icon" aria-label="Instagram">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span class="margin-left-xs">Instagram</span>
+            </a>
+          </li>
+  
+          <li class="f-header__item">
+            <a href="https://behance.net/calvonico" target="_blank" class="f-header__link f-header__link--icon" aria-label="Behance">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
+              <span class="margin-left-xs">Behance</span>
+            </a>
+          </li>
+  
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="overflow-hidden padding-y-xl bg-contrast-lower">
+    <div class="margin-bottom-lg text-center">
+      <h1 class="text-center">La Línea de Tiempo del Coronavirus (COVID-19)</h1>
+      <p class="margin-top-sm">El virus originado en un mercado de China se ha propagado en más de 155 países,<br> matando a más de 10.000 personas y afectando a decenas de miles en pocas semanas.</p>
+      <p class="margin-top-sm">Esto es lo que se sabe hasta ahora.</p>
+      <p class="margin-top-sm text-xs">Última actualización: 20 de Marzo 2020.</p>
+    </div>
+  
+    <div class="js-sticky-sharebar-target">
+    <div class="container max-width-adaptive-lg">
+      <div class="v-timeline v-timeline--icons js-v-timeline" data-animation="on">
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-primary border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M24,7V6H22V7a2,2,0,0,1-2,2h-.589A7.992,7.992,0,0,0,4.589,9H4A2,2,0,0,1,2,7V6H0V7a4,4,0,0,0,4,4h.069A8.047,8.047,0,0,0,4,12v1H0v2H4v1a8.047,8.047,0,0,0,.069,1H4a4,4,0,0,0-4,4v1H2V21a2,2,0,0,1,2-2h.589a7.992,7.992,0,0,0,14.822,0H20a2,2,0,0,1,2,2v1h2V21a4,4,0,0,0-4-4h-.069A8.047,8.047,0,0,0,20,16V15h4V13H20V12a8.047,8.047,0,0,0-.069-1H20A4,4,0,0,0,24,7Z"></path><circle cx="8" cy="8" r="2"></circle></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-18T00:00">Diciembre 31, 2019</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Aparece el virus</h2>
+      
+                <p>En la ciudad China de Wuhan empieza el brote de Coronavirus (COVID-19), que es una enfermedad infecciosa respiratoria que puede ir desde el resfriado común hasta enfermedades más graves como el síndrome respiratorio de Oriente Medio (MERS) y el síndrome respiratorio agudo severo (SRAS).</p>
+              </div>
+    
+            </div>
+          </div>
+        </section>
+  
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-error border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time id="enero" class="v-timeline__date-value" datetime="2020-03-26T00:00">Enero 11, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>El primer muerto</h2>
+      
+                <p>El gobierno chino confirma el primer muerto por una enfermedad causada por el virus, que a esta altura ya ha infectado a decenas de personas. El fallecido es un hombre de 61 años, cliente regular del mercado donde se cree que se originó la enfermedad. Además, el hombre sufría enfermedad del hígado crónica y tenía tumores abdominales.</p>
+              </div>
+    
+              <div class="margin-top-md">
+                <a href="https://www.nytimes.com/2020/01/10/world/asia/china-virus-wuhan-death.html" target="_blank"><button class="btn btn--primary">Ver más</button></a>
+              </div>
+            </div>
+  
+            <!--<div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="text-component">
+                <h2>Title of item 3</h2>
+      
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, totam.</p>
+              </div>
+            </div>-->
+          </div>
+        </section>
+  
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-04-08T00:00">Enero 20, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Se confirman casos en otros países</h2>
+      
+                <p>Los primeros casos confirmados fuera de China ocurrieron en Japón, Corea del Sur y Tailandia de acuero a la OMS. El primer caso en Estados Unidos sucedió al día siguiente en el estado de Washington. El afectado es un hombre que volvió de un viaje a Wuhan.</p>
+  
+                <!--<figure class="text-component__block">
+                  <img src="../../../app/assets/img/vertical-timeline-img-1.jpg" alt="Image description">
+                </figure>-->
+              </div>
+
+              <div class="margin-top-md">
+                <a href="https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200121-sitrep-1-2019-ncov.pdf?sfvrsn=20a99c10_4" target="_blank"><button class="btn btn--primary">Ver más</button></a>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-05-17T00:00">Enero 23, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Wuhan queda cerrada</h2>
+      
+                <p>Las autoridades chinas deciden cerrar Wuhan cancelando vuelos y trenes desde la ciudad, y suspendiendo subtes, ferris y colectivos dentro de la misma. A este punto, 17 personas han muerto y más de 570 se encuentran infectadas 
+              </div>
+    
+
+            </div>
+          </div>
+        </section>
+  
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g>
+                  <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"></path>
+              <circle cx="8" cy="8" r="2"></circle></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-06-01T00:00">Enero 30, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>La OMS declara la emergencia global</h2>
+      
+                <p>Luego de conocerse cientos nuevos en China, la OMS declara oficialmente la emergencia global y empiezan a alertar a los viajeros que eviten China a toda costa.</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-error border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time id="febrero" class="v-timeline__date-value" datetime="2020-03-26T00:00">Febrero 2, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>El primer muerto fuera de China</h2>
+      
+                <p>Un hombre de Filipinas de 44 años es el primer muerto fuera de China. En este punto, ya han fallecido más de 360 personas por el virus.</p>
+              </div>
+    
+              <div class="margin-top-md">
+                <a href="https://www.nytimes.com/2020/02/02/world/asia/philippines-coronavirus-china.html" target="_blank"><button class="btn btn--primary">Ver más</button></a>
+              </div>
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g>
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+              <circle cx="8" cy="8" r="2"></circle></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-06-01T00:00">Febrero 5, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Crucero en cuarentena</h2>
+      
+                <p>Luego de un viaje de 2 semanas por el sudeste asiático, más de 3.600 personas a bordo del Crucero Diamond Princess en Yokohama Japón, quedaron en cuarentena.</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-error border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Febrero 7, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>La muerte del doctor chino</h2>
+      
+                <p>La muerte del Dr. Li Wenliang el 7 de febrero provocó furia y frustración. A principios de enero, el Dr. Li trató de avisar que el virus podría salirse de control. Sin embargo, el gobierno de China le obligó a firmar un comunicado diciendo que su alerta habia sido infundada y un rumor ilegal. La furia se debió a que el Gobierno quedó expuesto en que no supo manejar la situación, al no brindar información y silenciando a los que querian avisar del peligro.</p>
+              </div>
+    
+              <div class="margin-top-md">
+                <a href="https://www.nytimes.com/2020/02/07/business/china-coronavirus-doctor-death.html" target="_blank"><button class="btn btn--primary">Ver más</button></a>
+              </div>
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g>
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+              <circle cx="8" cy="8" r="2"></circle></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-06-01T00:00">Febrero 10, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Crecen los muertos en China</h2>
+      
+                <p>Los fallecidos en China llegan a los 908, sobrepasando así a los muertos globales por la epidemia de SARS en 2002/03, que mató a 774. En este punto, los casos confirmados de infectados en el país, crece a 40.171.</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-error border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Febrero 14, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Francia anuncia la primer muerte en Europa</h2>
+      
+                <p>Una turista china de 80 años murió el 14 de Febrero en un hospital de París, y fue la primer muerte por coronavirus fuera de Asia. Fue la cuarta muerte por el virus fuera de China, donde ya han muerto más de 1500 personas, la mayoría en la provincia de Hubei.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-success border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M24,7V6H22V7a2,2,0,0,1-2,2h-.589A7.992,7.992,0,0,0,4.589,9H4A2,2,0,0,1,2,7V6H0V7a4,4,0,0,0,4,4h.069A8.047,8.047,0,0,0,4,12v1H0v2H4v1a8.047,8.047,0,0,0,.069,1H4a4,4,0,0,0-4,4v1H2V21a2,2,0,0,1,2-2h.589a7.992,7.992,0,0,0,14.822,0H20a2,2,0,0,1,2,2v1h2V21a4,4,0,0,0-4-4h-.069A8.047,8.047,0,0,0,20,16V15h4V13H20V12a8.047,8.047,0,0,0-.069-1H20A4,4,0,0,0,24,7Z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Febrero 17-19, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>China analiza dejar de comer animales salvajes, mientras cientos abandonan el crucero</h2>
+      
+                <p>Un comité del congreso Chino evalúa abandonar la práctica de comer animales salvajes, que se cree originaron el brote del virus. Mientras tanto, en Japón, cientos de personas sin el coronavirus abandonan la cuarentena que habían indicado para el Crucero. Del total de pasajeros, 621 fueron infectados.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-error border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Febrero 21, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>El virus aparece en Irán</h2>
+      
+                <p>Irán anuncia dos casos de coronavirus en el país. Horas después confirman que los pacientes habían muerto. Dos días después, anuncian otras dos muertes. La fuente del virus es desconocida. Para la fecha, los casos globales ascienden a 76.000 de acuerdo a la OMS.</p>
+              </div>
+
+              <div class="margin-top-md">
+                <a href="https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200220-sitrep-31-covid-19.pdf?sfvrsn=dfd11d24_2" target="_blank"><button class="btn btn--primary">Ver más</button></a>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Febrero 23, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Crecen los casos de virus en Italia</h2>
+      
+                <p>Europa enfrenta un mayor brote del virus cuando los casos reportados en Italia pasan de menos de 5 a más de 150. En la región Lombarda, las autoridades cierran 10 pueblos cuando muchos casos aparecen en Codogno al sudeste de Milán. Como resultado, las escuelas cierran y los eventos culturales y deportivos son cancelados.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Febrero 24, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Irán se convierte en el segundo foco del virus</h2>
+      
+                <p>Irán confirma 61 casos y 12 muertes, más que cualquier otro país excepto China, y los expertos muestran preocupación ya que los límites de Irán son cruzados anualmente por millones de peregrinos y trabajadores. Aparecen casos en Irak, Afganistán, Bahrain, Kuwait, Oman, Líbano, los Emiratos Árabes Unidos y Canadá. Todos originados en Irán.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Febrero 26, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>El coronavirus llega a Brasil</h2>
+      
+                <p>Las autoridades de salud de Brasil confirman que el hombre de 61 años de San Pablo, recién llegado de un viaje de negocios por Italia, dio positivo en coronavirus. Es el primer caso en América Latina.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Febrero 28, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Crecen los infectados en Europa</h2>
+      
+                <p>Italia ya cuenta con 800 personas infectadas. Aparecen casos en otros 14 países incluyendo Irlanda del Norte y Gales (ambos originados en Italia). Alemania confirma alrededor de 60 infectados y Francia 57, casi el triple que dos días antes. Tanto Inglaterra como Suiza reportan casos adicionales, mientras Bielorrusia, Estonia y Lituania confirman sus primeros infectados.</p>
+                 <p>Por otro lado, en Nigeria (el país más poblado de África) confirma su primer caso de coronavirus: un ciudadano Italiano que volvió a Lagos luego de un paseo por Milán.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-error border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M24,7V6H22V7a2,2,0,0,1-2,2h-.589A7.992,7.992,0,0,0,4.589,9H4A2,2,0,0,1,2,7V6H0V7a4,4,0,0,0,4,4h.069A8.047,8.047,0,0,0,4,12v1H0v2H4v1a8.047,8.047,0,0,0,.069,1H4a4,4,0,0,0-4,4v1H2V21a2,2,0,0,1,2-2h.589a7.992,7.992,0,0,0,14.822,0H20a2,2,0,0,1,2,2v1h2V21a4,4,0,0,0-4-4h-.069A8.047,8.047,0,0,0,20,16V15h4V13H20V12a8.047,8.047,0,0,0-.069-1H20A4,4,0,0,0,24,7Z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Febrero 29, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Primer muerto por coronavirus en Estados Unidos</h2>
+      
+                <p>Un paciente de Seattle se convirtió en el primero en morir por coronavirus en los Estados Unidos. Mientras el número de infectados a nivel global asciende a los 87.000, Trump indica un alerta de "no viajar" a las áreas de Italia y Corea del Sur. También indica no viajar a Irán, y no dejar entrar a nadie que haya visitado Irán en los últimos 14 días.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time id="marzo" class="v-timeline__date-value" datetime="2020-03-26T00:00">Marzo 1, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>El mundo afectado</h2>
+      
+                <p>Los casos de coronavirus ya llegan a muchos países. Estados Unidos reporta una segunda muerte, mientras aparecen casos en Qatar, Ecuador, México, Escocia, Armenia, República Dominicana, República Checa e Irlanda. Los fallecidos por el COVID-19 ya son más de 3.000, y los casos de gente infectada llegan a más de 90.000, siendo casi 80.000 solo en China. Asimismo, los recuperados a nivel mundial suman más de 42.000.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Marzo 6, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Latinoamérica reporta casos</h2>
+      
+                <p>Colombia, Costa Rica y Perú reportan sus primeros casos. En tanto, Alemania suma ya 534 casos en total. Gran Bretaña y Suiza confirman la primer muerte por el virus, ambos casos en personas de más de 74 años. Australia cierra su primer escuela cuando un estudiante de 16 años dio positivo en el test. Se cree que la transmisión fue local. En tanto, las muertes confirmadas por Coronavirus suman 3.383 (3.042 solo en China), con 98.380 infectados (80.550 solo en China) y 55.420 recuperados.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-error border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Marzo 7, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Hotel en China se derrumba</h2>
+      
+                <p>Alrededor de 70 personas quedaron atrapadas en el hotel que se derrumbo y que servía para cuarentena en la ciudad de Quanzhou.<br>En Corea del Sur, el número de casos trepó a 6.767 y las muertes a 44. En Estados Unidos, las muertes ya son 19 y se declara la emergencia en Nueva York.<br>Un doctor en Australia que había vuelto de USA dió positivo y tuvieron que cerrar la clínica. Oficiales de la salud indicaron que el doctor había estado en contacto con otros 70 pacientes.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-error border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M24,7V6H22V7a2,2,0,0,1-2,2h-.589A7.992,7.992,0,0,0,4.589,9H4A2,2,0,0,1,2,7V6H0V7a4,4,0,0,0,4,4h.069A8.047,8.047,0,0,0,4,12v1H0v2H4v1a8.047,8.047,0,0,0,.069,1H4a4,4,0,0,0-4,4v1H2V21a2,2,0,0,1,2-2h.589a7.992,7.992,0,0,0,14.822,0H20a2,2,0,0,1,2,2v1h2V21a4,4,0,0,0-4-4h-.069A8.047,8.047,0,0,0,20,16V15h4V13H20V12a8.047,8.047,0,0,0-.069-1H20A4,4,0,0,0,24,7Z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Marzo 8, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Primer muerte en Argentina</h2>
+      
+                <p>Un hombre de 64 años se convirtió en la primera víctima mortal del coronavirus en Argentina y en América Latina. había estado recientemente en Francia. El hombre empezó a mostrar síntomas el pasado 28 de febrero, tres días después de retornar de Europa, cuando empezó a tener fiebre, tos y dolor de garganta. Antes de contagiarse con el coronavirus, el hombre ya estaba aquejado de varios problemas de salud crónicos como diabetes, hipertensión, bronquitis crónica e insuficiencia renal.</p>
+              </div>
+
+              <div class="margin-top-md">
+                <a href="https://www.bbc.com/mundo/noticias-america-latina-51787545" target="_blank"><button class="btn btn--primary">Ver más</button></a>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M24,7V6H22V7a2,2,0,0,1-2,2h-.589A7.992,7.992,0,0,0,4.589,9H4A2,2,0,0,1,2,7V6H0V7a4,4,0,0,0,4,4h.069A8.047,8.047,0,0,0,4,12v1H0v2H4v1a8.047,8.047,0,0,0,.069,1H4a4,4,0,0,0-4,4v1H2V21a2,2,0,0,1,2-2h.589a7.992,7.992,0,0,0,14.822,0H20a2,2,0,0,1,2,2v1h2V21a4,4,0,0,0-4-4h-.069A8.047,8.047,0,0,0,20,16V15h4V13H20V12a8.047,8.047,0,0,0-.069-1H20A4,4,0,0,0,24,7Z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Marzo 12, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Tom Hanks infectado</h2>
+      
+                <p>El famoso actor estaba en Australia filmando una película cuando él y su esposa empezaron a sentirse mal. Luego de hacerse el test, dieron positivo en el virus.</p>
+              </div>
+
+              <div class="margin-top-md">
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/B9nVasnBNF5/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/B9nVasnBNF5/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> Ver esta publicación en Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div></a> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/B9nVasnBNF5/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Hello, folks. @ritawilson and I are down here in Australia. We felt a bit tired, like we had colds, and some body aches. Rita had some chills that came and went. Slight fevers too. To play things right, as is needed in the world right now, we were tested for the Coronavirus, and were found to be positive. Well, now. What to do next? The Medical Officials have protocols that must be followed. We Hanks’ will be tested, observed, and isolated for as long as public health and safety requires. Not much more to it than a one-day-at-a-time approach, no? We’ll keep the world posted and updated. Take care of yourselves! Hanx!</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Una publicación compartida de <a href="https://www.instagram.com/tomhanks/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Tom Hanks</a> (@tomhanks) el <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2020-03-12T01:08:49+00:00">11 Mar, 2020 a las 6:08 PDT</time></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M24,7V6H22V7a2,2,0,0,1-2,2h-.589A7.992,7.992,0,0,0,4.589,9H4A2,2,0,0,1,2,7V6H0V7a4,4,0,0,0,4,4h.069A8.047,8.047,0,0,0,4,12v1H0v2H4v1a8.047,8.047,0,0,0,.069,1H4a4,4,0,0,0-4,4v1H2V21a2,2,0,0,1,2-2h.589a7.992,7.992,0,0,0,14.822,0H20a2,2,0,0,1,2,2v1h2V21a4,4,0,0,0-4-4h-.069A8.047,8.047,0,0,0,20,16V15h4V13H20V12a8.047,8.047,0,0,0-.069-1H20A4,4,0,0,0,24,7Z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Marzo 13, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Cierran fronteras y eventos</h2>
+      
+                <p>Varios países empiezan a cerrar sus fronteras, así como también escuelas y eventos donde se junten más de 500 personas. Entre ellos están Qatar, Bulgaria, Turquía, México, Portugal, Costa Rica, Bélgica, República Checa, Chile y Francia.<br>En tanto, los muertos por el virus ya llegan a los 5.500 y los infectados a 145.300 con más de 71.600 recuperados.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Marzo 15, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Argentina se suma al cierre de fronteras</h2>
+      
+                <p>Las fronteras estarán cerradas por 30 días para los no residentes. Asimismo, se suspenden las clases presenciales en todos los niveles, así como también los eventos que reúnan más de 200 personas hasta el 31 de marzo. Como otros países, la cuarentena es necesaria para contener y evitar el contagio.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Marzo 16, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Actor Idris Elba positivo en Coronavirus</h2>
+      
+                <p>El actor británico Idris Elba confirma estar contagiado de coronavirus y empieza su aislamiento.<br>Otros países se suman al cierre de fronteras para evitar los contagios.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Marzo 17, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Suspenden grandes eventos deportivos</h2>
+      
+                <p>Como hace unos días confirmaron las autoridades de la FIA, la Fórmula 1 se aplazará hasta los primeros días de mayo. La Conmebol y la UEFA deciden suspender la Copa América y la Eurocopa hasta el 2021, así como tambien la Copa Libertadores y la Champions League. <br>La OMS declara a Europa el nuevo epicentro de la pandemia, ya que la región muestra más casos y muertes que cualquier otro lugar del mundo, exceptuando China. España ya suma más de 11.000 casos e Italia más de 1.000 muertes.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Marzo 18, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>La OMS le pide esfuerzos extra al sudeste asiático</h2>
+      
+                <p>La OMS le pidió a los países del sudeste asiático mayor "agresividad" en la contención del virus y el apoyo de toda la sociedad frente a la pandemia. Mientras tanto, España confirma que han superado los 13.700 casos.<br>A la fecha, el COVID-19 se ha cobrado más de 7.900 muertes y más de 198.000 casos alrededor del mundo.</p>
+              </div>
+
+            </div>
+  
+          </div>
+        </section>
+
+        <section class="v-timeline__section js-v-timeline__section">
+          <div class="v-timeline__marker bg-error border border-3 border-bg shadow-xs" aria-hidden="true">
+            <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M24,7V6H22V7a2,2,0,0,1-2,2h-.589A7.992,7.992,0,0,0,4.589,9H4A2,2,0,0,1,2,7V6H0V7a4,4,0,0,0,4,4h.069A8.047,8.047,0,0,0,4,12v1H0v2H4v1a8.047,8.047,0,0,0,.069,1H4a4,4,0,0,0-4,4v1H2V21a2,2,0,0,1,2-2h.589a7.992,7.992,0,0,0,14.822,0H20a2,2,0,0,1,2,2v1h2V21a4,4,0,0,0-4-4h-.069A8.047,8.047,0,0,0,20,16V15h4V13H20V12a8.047,8.047,0,0,0-.069-1H20A4,4,0,0,0,24,7Z"></path></g></svg>
+          </div>
+    
+          <div class="v-timeline__items-group">
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="v-timeline__date margin-bottom-sm">
+                <time class="v-timeline__date-value" datetime="2020-03-26T00:00">Marzo 20, 2020</time>
+              </div>
+    
+              <div class="text-component">
+                <h2>Argentina declara la cuarentena total</h2>
+      
+                <p>El presidente indicó a toda la población quedarse en sus casas hasta el 31 de marzo. Las cifras oficiales son cerca de 200 infectados y 3 muertos, aunque algunos especulan que son más.<br>Los muertos a nivel mundial cruzaron la barrera de los 10.000. Sin embargo, hay esperanzas de que todo termine ya que China indicó que no hubo nuevos casos reportados por segundo día consecutivo en Wuhan, donde comenzó todo.</p>
+              </div>
+
+            </div>
+
+            <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+              <div class="text-component">
+                <h2>Italia profundiza la crisis</h2>
+      
+                <p>Italia vive momentos desesperantes: las muertes confirmadas por el virus llegan a las 3.405, superando a China (3.252).<br>Los casos confirmados en el país llegan a 41.035, menos de la mitad que los 81.193 confirmados en China.</p>
+              </div>
+            </div>
+
+          </div>
+  
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="sticky-sharebar js-sticky-sharebar">
+    <ul class="sticky-sharebar__list">
+      <li>
+        <a class="sticky-sharebar__btn js-social-share" href="#enero">
+          <svg class="icon" viewBox="0 0 48 48"><title>Enero</title><g><path d="M38 6H10c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V10c0-2.21-1.79-4-4-4zM28 34h-4V18h-4v-4h8v20z"></path></g></svg>
+        </a>
+      </li> 
+
+      <li>
+        <a class="sticky-sharebar__btn js-social-share" href="#febrero">
+          <svg class="icon" viewBox="0 0 48 48"><title>Febrero</title><path d="M38 6H10c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V10c0-2.21-1.79-4-4-4zm-8 16c0 2.21-1.79 4-4 4h-4v4h8v4H18v-8c0-2.21 1.79-4 4-4h4v-4h-8v-4h8c2.21 0 4 1.79 4 4v4z"></path></svg>
+        </a>
+      </li> 
+
+      <li>
+        <a class="sticky-sharebar__btn js-social-share" href="#marzo">
+          <svg class="icon" viewBox="0 0 48 48"><title>Marzo</title><g><path d="M38.01 6h-28c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V10c0-2.21-1.79-4-4-4zm-8 15c0 1.66-1.34 3-3 3 1.66 0 3 1.34 3 3v3c0 2.21-1.79 4-4 4h-8v-4h8v-4h-4v-4h4v-4h-8v-4h8c2.21 0 4 1.79 4 4v3z"></path></g></svg>
+        </a>
+      </li>
+    
+    </ul>
+  </div>
+
+  <footer class="main-footer padding-y-sm">
+    <div class="container max-width-lg">
+    
+      <div class="main-footer__colophon">
+        <div class="main-footer__colophon-nav">
+          <span><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"> CC 2020</a> &copy; Creado por Nico Calvo | Coronavirus v2 | Fuentes: <a href="https://www.pharmaceutical-technology.com/news/coronavirus-a-timeline-of-how-the-deadly-outbreak-evolved/" target="_blank">Pharmaceutical Technology</a>, <a href="https://www.who.int/es" target="_blank">OMS</a>, <a href="https://www.nytimes.com/article/coronavirus-timeline.html" target="_blank">NY Times</a></span>
+        </div>
+  
+        <div class="main-footer__socials">
+          <a href="https://linkedin.com/in/nicolascalvo" target="_blank">
+            <svg class="icon" viewBox="0 0 28 28"><title>LinkedIn</title><g><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></g></svg>
+          </a>
+
+          <a href="https://instagram.com/calvonico" target="_blank">
+            <svg class="icon" viewBox="0 0 24 24"><title>Instagram</title><g><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></g></svg>
+          </a>
+  
+          <a href="https://behance.net/calvonico" target="_blank">
+            <svg class="icon" viewBox="0 0 24 24"><title>Behance</title><g><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></g></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="back-to-top js-back-to-top" href="#" data-offset="100" data-duration="300">
+    <svg class="icon" viewBox="0 0 16 16"><title>Go to top of page</title><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,11.5 8,4 0.5,11.5 "></polyline></g></svg>
+  </a>
+  
+<script src="assets/js/util.js"></script>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>

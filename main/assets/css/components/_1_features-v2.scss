@@ -1,0 +1,27 @@
+/* -------------------------------- 
+
+File#: _1_features-v2
+Title: Features v2
+Descr: A section containing a list of features
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.features-v2 {}
+
+.features-v2__item {
+  figure {
+    flex-shrink: 0;
+  }
+
+  img {
+    display: block;
+    width: 64px;
+  }
+}
+
+@include breakpoint(md) {
+  .features-v2__item img {
+    width: 128px;
+  }
+}
